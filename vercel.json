@@ -1,17 +1,13 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "build/server/index.js",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": [
-          "build/**",
-          "src/app/api/**"
-        ]
-      }
+  "buildCommand": "npm install --legacy-peer-deps --ignore-scripts && npm run build",
+  "outputDirectory": "build/client",
+  "functions": {
+    "build/server/index.js": {
+      "runtime": "nodejs20.x",
+      "includeFiles": "src/app/api/**"
     }
-  ],
+  },
   "routes": [
     {
       "src": "/assets/(.*)",
