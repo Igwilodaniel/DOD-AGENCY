@@ -1,0 +1,7 @@
+[build]
+builder = "nixpacks"
+buildCommand = "npm install --legacy-peer-deps --ignore-scripts && npm run build"
+
+[deploy]
+startCommand = "node build/server/index.js"
+restartPolicyType = "on-failure"
