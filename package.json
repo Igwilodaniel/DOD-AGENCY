@@ -4,9 +4,9 @@
 	"type": "module",
 	"scripts": {
 		"dev": "react-router dev",
-  "build": "react-router build && mkdir -p build/server/src/app && cp -r src/app/api build/server/src/app/",
-  "start": "react-router-serve ./build/server/index.js",
-  "typecheck": "react-router typegen && tsc --noEmit"
+		"build": "react-router build",
+  		"start": "react-router-serve ./build/server/index.js",
+		"typecheck": "react-router typegen && tsc --noEmit"
 	},
 	"dependencies": {
 		"@auth/core": "^0.37.2",
